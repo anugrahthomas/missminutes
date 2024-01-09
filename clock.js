@@ -2,7 +2,7 @@ const hour = document.getElementById("hour");
 const min = document.getElementById("min");
 const sec = document.getElementById("sec");
 
-const time = function() => {
+const time = function() {
   const now = new Date();
   hour.textContent = `${
     String(now.getHours()).length <= 1 ? `0${now.getHours()}` : now.getHours()
