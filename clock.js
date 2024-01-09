@@ -2,7 +2,7 @@ const hour = document.getElementById("hour");
 const min = document.getElementById("min");
 const sec = document.getElementById("sec");
 
-setInterval(() => {
+const time = function() => {
   const now = new Date();
   hour.textContent = `${
     String(now.getHours()).length <= 1 ? `0${now.getHours()}` : now.getHours()
@@ -17,4 +17,6 @@ setInterval(() => {
       ? `0${now.getSeconds()}`
       : now.getSeconds()
   }`;
-}, 1000);
+};
+time()
+setInterval(time, 1000);
